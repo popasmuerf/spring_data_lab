@@ -1,3 +1,5 @@
 /home/popasmuerf/src/jvm/java/spring_lab/data/spring_data_lab/src/main/java/io/thirdplanet/config/DataJPAExampleInitializer.java
 /home/popasmuerf/src/jvm/java/spring_lab/data/spring_data_lab/src/main/java/io/thirdplanet/config/ApplicationContext.java
 /home/popasmuerf/src/jvm/java/spring_lab/data/spring_data_lab/src/main/java/io/thirdplanet/App.java
+/home/popasmuerf/src/jvm/java/spring_lab/data/spring_data_lab/src/main/java/io/thirdplanet/domain/Address.java
+/home/popasmuerf/src/jvm/java/spring_lab/data/spring_data_lab/src/main/java/io/thirdplanet/domain/Contact.java

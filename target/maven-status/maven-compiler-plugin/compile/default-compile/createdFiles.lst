@@ -1,3 +1,5 @@
 io/thirdplanet/config/DataJPAExampleInitializer.class
 io/thirdplanet/App.class
 io/thirdplanet/config/ApplicationContext.class
+io/thirdplanet/domain/Contact.class
+io/thirdplanet/domain/Address.class
