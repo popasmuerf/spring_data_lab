@@ -1,6 +1,7 @@
 package io.thirdplanet.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -51,4 +52,27 @@ public class Contact {
     }
 
     
+    public static class Builder{
+        private Contact built  ;
+
+        public Builder(String firstName, String lastName){
+            built = new Contact() ;
+            built.firstName = firstName ;
+            built.lastName = lastName ;
+        }
+
+        public Builder address(String streetAddress, 
+                                String postCode,
+                                String postOffice,
+                                String state,
+                                String country){
+                                  return null ;  
+                                }
+
+    }
+
+
+    
+
+
 }
