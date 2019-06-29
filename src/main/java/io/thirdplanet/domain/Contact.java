@@ -44,5 +44,11 @@ public class Contact {
     private long version ;
     //getters and setters...
 
+
+    //builder method
+    public static  Contact builder(){
+        return new  Contact() ;
+    }
+
     
 }
