@@ -48,8 +48,19 @@ public class Address{
                     }
 
 
-    public static class Builder{
+    public static Builder getBuilder(String streetAddress,
+                                    String postCode,
+                                    String postOffice ){
+        Builder builder = new Builder(streetAddress,
+                                      postCode,
+                                      postOffice);
+
+        return builder ;
+    }
+
+    public  static class  Builder{
         private Address built ;
+
         public Builder(
         String streetAddress,
         String postCode,
@@ -67,7 +78,7 @@ public class Address{
         }
 
         public Builder state(String state){
-            built.country = state ;
+            built.state = state ;
             return this  ;
         }
 
