@@ -88,6 +88,16 @@ public class Address{
 
     } //end inner-Builder class             
 
-   
+   public void update(final String streetAddress,
+                      final String postCode,
+                      final String postOffice,
+                      final String state ){
+
+            this.streetAddress = streetAddress ;
+            this.postCode = postCode ;
+            this.postOffice = postOffice ;
+            this.state = state ;
+
+    }
 
 }//end class

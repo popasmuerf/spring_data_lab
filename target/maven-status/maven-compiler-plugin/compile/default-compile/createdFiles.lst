@@ -1,7 +1,10 @@
 io/thirdplanet/App.class
 io/thirdplanet/config/ApplicationContext.class
 io/thirdplanet/domain/Contact.class
+io/thirdplanet/repos/BaseRepository.class
 io/thirdplanet/domain/Address$Builder.class
 io/thirdplanet/config/DataJPAExampleInitializer.class
+io/thirdplanet/domain/BaseEntity.class
 io/thirdplanet/domain/Contact$Builder.class
+io/thirdplanet/repos/BaseRepositoryImpl.class
 io/thirdplanet/domain/Address.class
