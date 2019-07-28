@@ -82,6 +82,55 @@ import com.jolbox.bonecp.BoneCPDataSource;
  *                The configuration of the data source beans is given as
  *                follows..
  * 
+ * 
+ *               About Beans...
+ *               ---------------------------------
+ *               @Bean is a method-level annotation  and a direct analog of XML <bean/> element.
+ *               Teh annotation supports mof of the attributes offered b <bean/>, such as
+ *               such as: init-method, destroy-method, autowirign, lazy-init, dependency-check, 
+ *               dependency-chek,depends-on and scope
+ * 
+ * 
+ *               To delcare a bean, simply annotate a method with the @Bean annotation.
+ *               When JavaConfig encouners such a method, it will execute that
+ *               method and and register the return value as a bean with a BeanFactory.
+ *              By default, the bean name will bethe same as the method name.
+ * 
+ *              //Example
+ * 
+ *              @Configuration
+ *              public class AppConfig{
+ *                  @Bean
+ *                  public TransferService transferService(){
+ *                      return new TransferServiceImpl() ;
+ *                  }
+ *              }
+ * 
+ * 
+ *              -or-
+ * 
+ *              <beans>
+ *                  <bean name="transferService" class="com.acme.TransferServiceImpl"/>
+ *              </beans>
+ * 
+ * 
+ *              Injecting dependencies
+ *              ---------------------------------------------
+ *              When @Bean have dependences on one another, expressing that 
+ *              dependency is as ssimple as having one bean method call another:
+ * 
+ *              @Configuration
+ *              public class AppConfig(){
+ *                  @Bean
+ *                  public Foo foo(){
+ *                      return new Foo(bar());
+ *                  }
+ *                  @Bean
+ *                  public Bar bar(){
+ *                      return new Bar() ;
+ *                  }
+ *              }
+ * 
  */
 public class ApplicationContext extends WebMvcConfigurerAdapter {
     @Resource
