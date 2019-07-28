@@ -5,6 +5,11 @@ import java.util.List;
 
 import io.thirdplanet.domain.BaseEntity;
 
+/*
+
+
+*/
+
 public interface BaseRepository<T extends BaseEntity, ID extends Serializable> {
     public T deleteById(ID id);
     public List<T> findAll() ;

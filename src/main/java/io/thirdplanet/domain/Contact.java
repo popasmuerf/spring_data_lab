@@ -66,13 +66,59 @@ public class Contact {
                                 String postOffice,
                                 String state,
                                 String country){
-                                  return null ;  
+
+                                Address address = Address.getBuilder(streetAddress
+                                , postCode
+                                , postOffice)
+                                .state(state)
+                                .country(country)
+                                .build();
+                                built.address = address ; 
+                                  return this ;  
                                 }
 
+
+        public Builder emailAddress(String emailAddress){
+            built.emailAddress = emailAddress ;
+            return this ;
+        }
+
+        public Builder phoneNumber(String phoneNumber){
+            built.phoneNumber = phoneNumber ;
+            return this ;
+        }
+
+        public Contact build(){
+            return built ;
+        }
     }
 
 
+    public static Builder getBuilder(String firstName, String lastName){
+        return new Builder(firstName, lastName);
+    }
+
+
+    public void update(final String firstName, 
+    final String lastName, 
+    final String emailAddress, 
+    final String phoneNumber){
+        this.firstName = firstName ;
+        this.lastName = lastName ;
+        this.emailAddress = emailAddress ;
+        this.phoneNumber = phoneNumber ;
+    }
     
+    public void updateAddress(final String streetAddress,
+    final String postCode,
+    final String postOffice,
+    final String state,
+    final String country){
+        if(address == null){
+            address = new Address() ;
+        }
+        address.update(streetAddress,postCode,postOffice,state, country);
+    }
 
 
 }

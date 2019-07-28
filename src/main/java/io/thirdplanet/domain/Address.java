@@ -6,6 +6,26 @@ import javax.persistence.Embeddable;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+
+The Address class is an embedded class that is used
+to store address information.  An embedded class is a clas that
+can be presisted only with its parent class.  Embedded
+dlasses are typically used to present the common concepts
+of the domain model  and to emphasize its object-oriented 
+nature.  The source code of the Address class is given as
+follows:
+
+
+*/
+
+
+
+
+
+
+
+
 @Embeddable
 public class Address{
 
@@ -91,12 +111,14 @@ public class Address{
    public void update(final String streetAddress,
                       final String postCode,
                       final String postOffice,
-                      final String state ){
+                      final String state,
+                      final String country ){
 
             this.streetAddress = streetAddress ;
             this.postCode = postCode ;
             this.postOffice = postOffice ;
             this.state = state ;
+            this.country = country ;
 
     }
 
