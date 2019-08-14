@@ -14,8 +14,9 @@ import lombok.Setter;
 
 @Entity
 @Table(name="contacts")
-public class Contact {
-    private static final String GeneratedType = null;
+public class Contact extends BaseEntity<Long>{
+    //private static final String GeneratedType = null;
+
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
     @Getter @Setter
@@ -118,6 +119,11 @@ public class Contact {
             address = new Address() ;
         }
         address.update(streetAddress,postCode,postOffice,state, country);
+    }
+
+    @Override
+    public Long getId() {
+        return null;
     }
 
 

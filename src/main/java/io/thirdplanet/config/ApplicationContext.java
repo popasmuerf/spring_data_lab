@@ -139,6 +139,13 @@ public class ApplicationContext extends WebMvcConfigurerAdapter {
 
     // Add our configuration somewhere in this class.....
 
+    /**
+     * Here we provide a Bean for setting up and returning
+     * a the Database connection setup
+     * 
+     * 
+     * @return an instance of BoneCPDdataSource
+     */
     @Bean
     public BoneCPDataSource dataSource() {
         BoneCPDataSource ds = new BoneCPDataSource();
@@ -149,6 +156,13 @@ public class ApplicationContext extends WebMvcConfigurerAdapter {
         return ds;
 
     }
+
+
+    /**
+     * Sets up an entity management bean.
+     * @return
+     *  A new Entity manager Bean
+     */
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {

@@ -10,7 +10,7 @@ import javax.persistence.Version;
 
     A mapped superclass has no separate table defined for it.
     
-    A Class designaed with the MappedSuperclass annotation can be mapped in the same way
+    A Class designated with the MappedSuperclass annotation can be mapped in the same way
     as an entity execpt that the mappings will apply only to its
     subclasses since no table exists for the mapped
     superclass itself.  When applied to the

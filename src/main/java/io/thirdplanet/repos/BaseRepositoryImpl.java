@@ -74,7 +74,7 @@ public abstract class BaseRepositoryImpl<T extends BaseEntity, ID extends Serial
         return entityClass;
     }
     
-    protected EntityManager gEntityManager(){
+    protected EntityManager getEntityManager(){
         return em ;
     }
 
